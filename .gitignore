@@ -46,3 +46,4 @@ app.*.map.json
 **/GeneratedPluginRegistrant.swift
 **/Generated_plugin_registrant.cc
 **/generated_plugins.cmake
+**/generated_plugin_registrant.h
