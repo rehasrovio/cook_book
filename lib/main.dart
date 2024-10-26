@@ -1,3 +1,4 @@
+import 'package:cook_book/src/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,19 +16,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('COOK BOOK'),
+      home: GestureDetector(
+        onTap: () => primaryFocus?.unfocus(),
+        child: const SignInPage(),
       ),
     );
   }
