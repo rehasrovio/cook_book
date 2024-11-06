@@ -14,8 +14,4 @@ class FirebaseCloudMessagingService {
   }
 }
 
-Future<void> handleBackgroundMessage(RemoteMessage message) async {
-  print('Title -> ${message.notification?.title}');
-  print('Body -> ${message.notification?.body}');
-  print('payload -> ${message.data}');
-}
+Future<void> handleBackgroundMessage(RemoteMessage message) async {}
