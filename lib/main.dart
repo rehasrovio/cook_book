@@ -1,7 +1,17 @@
-import 'package:cook_book/src/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:cook_book/src/plugins/firebase/firebase_cloud_messaging/firebase_cloud_messaging_service.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'package:cook_book/src/features/auth/presentation/pages/sign_in_page.dart';
+
+import 'firebase_options.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await FirebaseCloudMessagingService().initFireBaseMessaging();
   runApp(const MyApp());
 }
 
